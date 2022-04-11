@@ -1,0 +1,16 @@
+FROM circleci/node:14-browsers
+
+USER root
+# Install common user folders espically the `Downloads` folder
+RUN sudo apt-get install xdg-user-dirs
+
+WORKDIR /app
+
+COPY package.json ./
+COPY yarn.lock ./
+COPY e2e/ ./e2e/
+COPY .testcaferc.json ./
+COPY report-generator.js ./
+COPY testcafe-reporter-cucumber-json.json ./
+
+RUN yarn

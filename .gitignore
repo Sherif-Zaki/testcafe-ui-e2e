@@ -1,0 +1,6 @@
+.env
+docker/e2e.env
+reports
+node_modules
+cucumber-json-reports
+testcafe-reporter-cucumber-json.json

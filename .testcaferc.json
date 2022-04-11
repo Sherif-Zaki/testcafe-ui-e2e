@@ -1,0 +1,29 @@
+{
+  "browsers": ["chrome:headless"],
+  "src": ["e2e/tests"],
+  "screenshots": {
+    "path": "reports/screenshots/",
+    "takeOnFails": true,
+    "pathPattern": "${DATE}_${TIME}/test-${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.png"
+  },
+  "videoPath": "reports/screen-captures",
+  "videoOptions": {
+    "singleFile": true,
+    "failedOnly": true,
+    "pathPattern": "${DATE}_${TIME}/${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.mp4"
+  },
+  "videoEncodingOptions": {
+    "r": 20,
+    "aspect": "16:9"
+  },
+  "quarantineMode": false,
+  "selectorTimeout": 15000,
+  "assertionTimeout": 15000,
+  "pageLoadTimeout": 30000,
+  "compilerOptions": {
+    "typescript": {
+      "configPath": "e2e/tsconfig.json"
+    }
+  },
+  "skipJsErrors": true
+}

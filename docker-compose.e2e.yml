@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  e2e:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.e2e
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - ./docker/e2e.env
+    command: yarn e2e --concurrency 2
+volumes:
+  data:

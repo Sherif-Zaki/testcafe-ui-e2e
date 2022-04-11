@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "e2e": "testcafe --reporter spec,cucumber-json:reports/cucumber.json",
+    "reports": "yarn node report-generator.js"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "dotenv": "^10.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "testcafe": "^1.15.3",
+    "testcafe-reporter-cucumber-json": "^6.3.0",
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
