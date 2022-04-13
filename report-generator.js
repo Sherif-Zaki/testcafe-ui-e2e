@@ -4,7 +4,7 @@ const path = require('path');
 const projectName = path.basename(__dirname);
 const reportGenerationTime = new Date().toISOString();
 report.generate({
-  reportName: 'TestCafe Report for PriceHubble',
+  reportName: 'TestCafe Report',
   jsonDir: 'cucumber-json-reports',
   reportPath: 'reports',
   openReportInBrowser: true,
