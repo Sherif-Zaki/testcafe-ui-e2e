@@ -25,4 +25,3 @@ test('User should be able to place an order successfully', async (t) => {
     await t.expect(getLocation()).contains('https://www.saucedemo.com/checkout-complete.html');
     await t.expect(Selector('html').textContent).contains('Thank you for your order');
 })
-
