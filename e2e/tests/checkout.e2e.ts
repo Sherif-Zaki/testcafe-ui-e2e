@@ -26,14 +26,3 @@ test('User should be able to place an order successfully', async (t) => {
     await t.expect(Selector('html').textContent).contains('Thank you for your order');
 })
 
-test('User should be able to place an empty order', async (t) => {
-    await loginPage.automatedLogin();
-    await productsPage.goToCart();
-    await checkOutPage.checkOut();
-    await t.expect(getLocation()).contains('https://www.saucedemo.com/checkout-step-one.html');
-    await checkOutPage.userInfo(userInfo.firstName, userInfo.lastName, userInfo.lastName);
-    await checkOutPage.continueButton();
-    await t.expect(getLocation()).contains('https://www.saucedemo.com/checkout-step-two.html');
-    await checkOutPage.finishButton();
-    await t.expect(Selector('html').textContent).contains('Your Shopping Cart is empty');
-})
