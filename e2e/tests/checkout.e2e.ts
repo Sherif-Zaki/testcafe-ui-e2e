@@ -23,7 +23,7 @@ test('User should be able to place an order successfully', async (t) => {
     await t.expect(Selector('html').textContent).contains('Sauce Labs Backpack');
     await checkOutPage.finishButton();
     await t.expect(getLocation()).contains('https://www.saucedemo.com/checkout-complete.html');
-    await t.expect(Selector('html').textContent).contains('THANK YOU FOR YOUR ORDER');
+    await t.expect(Selector('html').textContent).contains('Thank you for your order');
 })
 
 test('User should be able to place an empty order', async (t) => {
